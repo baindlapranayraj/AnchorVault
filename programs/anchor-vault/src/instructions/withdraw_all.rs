@@ -16,7 +16,8 @@ pub struct WithDrawAll<'info> {
     #[account(
         mut,
         seeds =[VAULT_STATE_SEED,depositer.key.as_ref()],
-        bump = vault_state.vault_state_bump
+        bump = vault_state.vault_state_bump,
+        close = depositer
     )]
     pub vault_state: Account<'info, VaultState>,
 
@@ -49,9 +50,10 @@ impl<'info> WithDrawAll<'info> {
 
         let cpi_context = CpiContext::new_with_signer(cpi_program, cpi_accounts, signer_seeds);
 
-        transfer(cpi_context, self.vault_state.amount_deposited)?;
+        transfer(cpi_context, self.vault_account.lamports())?;
 
-        // TODO: Close the Account
+        // TODO:- Close the systemAccount hear
+        // Now close the vault account and send any remaining lamports to destination
 
         Ok(())
     }
