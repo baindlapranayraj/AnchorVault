@@ -6,12 +6,14 @@ The Anchor Vault Program is a decentralized application built on the Solana bloc
 
 ## Structure of Program
 
-<img src="images/project_structure.png" alt="Project Structure" width="900" height="500"/>
+<img src="https://github.com/baindlapranayraj/AnchorVault/blob/main/program-structure.png?raw=true" alt="Project Structure" width="900" height="500"/>
 <br/>
+
+
 
 ## Anchor Program TestCases ✅
 
-<img src="https://github.com/baindlapranayraj/AnchorVault/blob/main/test-cases.png" alt="Project Structure" width="900" height="500"/>
+<img src="https://github.com/baindlapranayraj/AnchorVault/blob/main/test-cases.png?raw=true" alt="Project Structure" width="900" height="500"/>
 <br/>
 
 ## Modules
